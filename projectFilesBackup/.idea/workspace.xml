@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="865c8e3d-173c-4fc3-ad9b-05d1692f8b48" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RZ8N612P92Y]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mMUgYS0u5JFCqVr8MxHnwERExt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_m215f-RZ8N612P92Y" />
+    <property name="DEBUGGABLE_PROCESS" value="com.example.unnatiworkforce" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-view/home/akshamaala/Desktop/Ashish/AKS Projects/Working/UnnatiWorkForce/app/src/main/java/com/example/unnatiworkforce/snackbar/layouts/SnackbarLayout.java_SELECTED" value="SnackbarLayout" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-preview/home/akshamaala/Desktop/Ashish/AKS Projects/Working/UnnatiWorkForce/app/src/main/java/com/example/unnatiworkforce/snackbar/layouts/SnackbarLayout.java_selected" value="Custom views" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-740865605">
+      <recent name="com.example.unnatiworkforce" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.unnatiworkforce.Models" />
+      <recent name="com.example.unnatiworkforce.GPS" />
+      <recent name="com.example.unnatiworkforce.Web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
+      <recent name="$PROJECT_DIR$/app/src/main/res" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/anim" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="UnnatiWorkForce.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="drawable-v24.* and 7 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnnatiWorkForce.app" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="drawable-v24.*" />
+        <pattern testClass="drawable-ldpi.*" />
+        <pattern testClass="drawable-xxhdpi.*" />
+        <pattern testClass="drawable-mdpi.*" />
+        <pattern testClass="drawable-hdpi.*" />
+        <pattern testClass="drawable-xxxhdpi.*" />
+        <pattern testClass="drawable.*" />
+        <pattern testClass="drawable-xhdpi.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="865c8e3d-173c-4fc3-ad9b-05d1692f8b48" name="Default Changelist" comment="" />
+      <created>1609303064229</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609303064229</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="617" y="307" width="187" height="178" key="#Custom_Plugin_Repositories" timestamp="1609306715748">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="617" y="307" width="187" height="178" key="#Custom_Plugin_Repositories/67.27.1299.741@67.27.1299.741" timestamp="1609306715748" />
+    <state x="163" y="118" key="#xdebugger.evaluate" timestamp="1609480731225">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="163" y="118" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1609480731225" />
+    <state x="368" y="224" width="824" height="484" key="AndroidCreateResourceFileDialog" timestamp="1609490777019">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="368" y="224" width="824" height="484" key="AndroidCreateResourceFileDialog/67.27.1299.741@67.27.1299.741" timestamp="1609490777019" />
+    <state x="451" y="144" width="531" height="505" key="AndroidProcessChooserDialog" timestamp="1609502979635">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="451" y="144" width="531" height="505" key="AndroidProcessChooserDialog/67.27.1299.741@67.27.1299.741" timestamp="1609502979635" />
+    <state width="453" height="478" key="DebuggerActiveHint" timestamp="1609503392127">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="453" height="478" key="DebuggerActiveHint/67.27.1299.741@67.27.1299.741" timestamp="1609503392127" />
+    <state x="499" y="139" width="424" height="513" key="FileChooserDialogImpl" timestamp="1609399166287">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="139" width="424" height="513" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1609399166287" />
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1609502979828">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1609502979828" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1609502979828">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1609502979828" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1609502979827">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1609502979827" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1609502979828">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1609502979828" />
+    <state width="1253" height="175" key="GridCell.Tab.1.bottom" timestamp="1609502981018">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1609502981018" />
+    <state width="1253" height="175" key="GridCell.Tab.1.center" timestamp="1609502981018">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1609502981018" />
+    <state width="1253" height="175" key="GridCell.Tab.1.left" timestamp="1609502981017">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1609502981017" />
+    <state width="1253" height="175" key="GridCell.Tab.1.right" timestamp="1609502981018">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1609502981018" />
+    <state x="205" y="31" key="SettingsEditor" timestamp="1609307237762">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1609307237762" />
+    <state width="649" height="371" key="XDebugger.FullValuePopup" timestamp="1609503392122">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="649" height="371" key="XDebugger.FullValuePopup/67.27.1299.741@67.27.1299.741" timestamp="1609503392122" />
+    <state x="488" y="176" width="446" height="440" key="chooseDestDirectoryDialog" timestamp="1609389224691">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="488" y="176" width="446" height="440" key="chooseDestDirectoryDialog/67.27.1299.741@67.27.1299.741" timestamp="1609389224691" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>179</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>155</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/GPS/GPSTracker.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/GPS/GPSTracker.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Database/GetData.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Database/GetData.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Database/GetData.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/LoginActivity.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/GPS/GPSTracker.java</url>
+          <line>150</line>
+          <properties class="com.example.unnatiworkforce.GPS.GPSTracker" method="getLatitude" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/unnatiworkforce/Web/Webservicerequest.java</url>
+          <line>39</line>
+          <properties class="com.example.unnatiworkforce.Web.Webservicerequest" method="MobileWebservice" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

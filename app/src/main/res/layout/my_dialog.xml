@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:background="@drawable/custom_alert_background">
+
+
+    <ImageView
+        android:id="@+id/titalImage"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="108dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:src="@drawable/success"/>
+
+
+    <TextView
+            android:layout_marginTop="17dp"
+            android:id="@+id/alertMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Attendance\nIs Summited Successfully!"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="12sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/alertbtn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Go Home"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="#00517A"
+            android:layout_marginTop="20dp"
+            android:background="#0000004D"/>
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:padding="7dp"
+        android:weightSum="12"
+        android:orientation="horizontal"
+        android:background="@drawable/search_background">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="11"
+            android:background="@null"
+            android:hint="Search with Contact"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#0C5F1C"/>
+
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/img_srch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/search" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="Store Name"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/store_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text=": TextView"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/retailer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="Name"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/retailer_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text=": TextView"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/retailer_mob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="Mobile"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/retailer_mob_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text=": TextView"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/retailer_dist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="District"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/retailer_dist_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text=": TextView"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/retailer_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:text="State"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/retailer_state_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text=": TextView"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="18dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/visit_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:text="Visit Date"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/visit_date_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:text=": Select Date"
+                android:drawableEnd="@drawable/calendar"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="18dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/gradient_spinner"/>
+        </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/reasonEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="18dp"
+        android:gravity="start"
+        android:hint="Please Describe Your Experience"
+        android:minLines="7"
+        android:textSize="16sp"
+        android:background="@drawable/green_border_squre"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="18dp"
+        android:textSize="18sp"
+        android:background="@drawable/greenbuttonbackgroung"
+        android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

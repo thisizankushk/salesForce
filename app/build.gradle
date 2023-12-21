@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.unnatiagro.salesforce"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 4
+        versionName "1.3"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+
+        maven {
+            url "https://s3.amazonaws.com/repo.commonsware.com"
+        }
+        mavenCentral()
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    implementation files('libs/sun.misc.BASE64Decoder.jar')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.commonsware.cwac:cam2:0.7.6'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.github.jkwiecien:EasyImage:3.0.4'
+    implementation 'com.github.dhaval2404:imagepicker:1.0'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.8'
+    implementation "com.google.android.gms:play-services-location:15.0.1"
+
+}

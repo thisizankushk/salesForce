@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:background="#ffffff"
+    android:layout_margin="5dp"
+    >
+
+    <ScrollView
+        android:layout_weight="1.7"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/liner_view">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_attandance_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textSize="13sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:hint="Date" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/spinner_dailyta_travelto"
+                    android:paddingLeft="5dp"
+                    android:tag="Travelled To"
+                    android:background="@drawable/border_spinner"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_place_frm"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:hint="Place From" />
+                <EditText
+                    android:id="@+id/et_place_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Places visited1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_place_visit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:hint="Places visited2"/>
+
+                <EditText
+                    android:id="@+id/et_place_visit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Places visited3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_place_visit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:hint="Places visited4" />
+
+                <EditText
+                    android:id="@+id/et_place_visit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Places visited5" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_open_mtr"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    android:hint="Opening Mtr" />
+
+                <EditText
+                    android:id="@+id/et_close_mtr"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Closing Mtr" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_total_km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:text="Total km done:-"/>
+
+
+                <TextView
+                    android:id="@+id/txt_km_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:text=""/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_toll_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:paddingLeft="5dp"
+                    android:hint="Toll tax (In Rs)" />
+
+                <EditText
+                    android:id="@+id/et_fare_taxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Fare/Taxi(In Rs)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_misc"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Misc expense(In Rs)" />
+
+                <EditText
+                    android:id="@+id/et_local_convense"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Local conveyance(In Rs)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:id="@+id/et_post_expense"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:hint="Postage expense(In Rs)" />
+
+                <EditText
+                    android:id="@+id/et_print"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:paddingLeft="5dp"
+                    android:hint="Printing/Stationary (In Rs)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/et_total_ta_claim"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Total :"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/et_total_da_claim"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="DA : 0"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/et_Remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border"
+                    android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.5"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:hint="Remarks for upload doc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="5dp">
+
+
+                <ImageView
+                    android:id="@+id/open_mtr_image"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/open_meter"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/close_mtr_img"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/closed_meter"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/doc_image1"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll1"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/doc_image2"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/doc_image3"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/doc_image4"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll2"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/doc_image5"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/doc_image6"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/doc_image7"
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/other_document"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight=".3">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_ta"
+            android:background="@drawable/round_corner_solid_blue"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Submit today TA"/>
+    </LinearLayout>
+</LinearLayout>

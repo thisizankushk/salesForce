@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:weightSum="6.4"
+    android:background="@drawable/bgwithillustration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.6">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.8"
+        android:weightSum="3.8"
+        android:background="@drawable/signupbg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Sign In"
+            android:textColor="#0C5F1C"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_weight=".66"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/signupbg"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+
+            <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+                android:singleLine="true"
+            android:textSize="20sp"
+            android:hint="User Name"
+             />
+
+            <EditText
+            android:id="@+id/editTextNumberPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Password"
+                android:singleLine="true"
+            android:layout_marginTop="30dp"
+            android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/signupbg"
+            android:orientation="vertical"
+            android:layout_weight="2.1"
+
+            android:gravity="center">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:background="@drawable/greenbuttonbackgroung"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"/>
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#BCC1B6"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+               />
+
+            <TextView
+                android:id="@+id/new_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login as a New User"
+                android:textColor="#BCC1B6"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
