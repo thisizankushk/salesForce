@@ -73,6 +73,7 @@ public class AddVisitNew extends Fragment {
     Bitmap bitmap;
     TextView addressOnImage;
     boolean isImageUploaded = false;
+    EditText retailer_mobile,reasonVisit;
     String[] permissions = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_COARSE_LOCATION};
 
 
@@ -110,6 +111,8 @@ public class AddVisitNew extends Fragment {
     private void init(View view) {
         searchView = view.findViewById(R.id.searchView);
         retailerName = view.findViewById(R.id.retailer_name);
+        retailer_mobile = view.findViewById(R.id.retailer_mobile);
+        reasonVisit = view.findViewById(R.id.reasonForVisit);
         district = view.findViewById(R.id.district);
         ImageCard = view.findViewById(R.id.image_card_view);
         shop_image_view = view.findViewById(R.id.shop_image_view);
@@ -342,6 +345,15 @@ public class AddVisitNew extends Fragment {
             e.printStackTrace();
         }
         return addressString;
+    }
+
+    private void submitData(){
+        String mobileNo,name,district_,reason;
+        mobileNo = retailer_mobile.getText().toString();
+        name = retailerName.getText().toString();
+        district_ = district.getText().toString();
+        reason = reasonVisit.getText().toString();
+
     }
 
 
