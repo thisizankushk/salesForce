@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#F4F5FA"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
@@ -33,6 +34,7 @@
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         tools:ignore="RtlHardcoded">
@@ -72,13 +74,32 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10.0sp"
         app:layout_constraintTop_toBottomOf="@+id/datePicker"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddVisit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddVisit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/contact_rounded"
+        android:backgroundTint="@null"
+        android:text="Add New Visit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
 
     <TextView
         android:id="@+id/dateFilter"
@@ -132,6 +153,7 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_button"
         android:text="+"
+        android:visibility="gone"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

@@ -61,6 +61,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/tvEnterMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Enter Mobile Number"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_grey"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/retailer_mobile"
+                app:layout_constraintBottom_toBottomOf="@+id/district"
+                android:visibility="gone"
+                />
+
             <EditText
                 android:id="@+id/retailer_mobile"
                 android:layout_width="match_parent"
@@ -68,13 +95,14 @@
                 android:backgroundTint="@color/rich_green"
                 android:ems="10"
                 android:hint="Mobile No."
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:paddingStart="8dp"
                 android:textSize="18sp"
+                android:maxLength="10"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvEnterMobile"
+                android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 />
@@ -86,7 +114,11 @@
                 android:backgroundTint="@color/rich_green"
                 android:ems="10"
                 android:hint="Name"
-                android:inputType="textPersonName"
+                android:alpha="0.5"
+                android:inputType="none"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:paddingStart="8dp"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -104,8 +136,12 @@
                 android:backgroundTint="@color/rich_green"
                 android:ems="10"
                 android:hint="District"
-                android:inputType="textPersonName"
                 android:paddingStart="8dp"
+                android:alpha="0.5"
+                android:inputType="none"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -115,23 +151,47 @@
                 android:layout_marginEnd="10dp"
                 />
 
-            <EditText
-                android:id="@+id/reasonForVisit"
+            <TextView
+                android:id="@+id/selectReasonTV"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:backgroundTint="@color/rich_green"
-                android:ems="10"
-                android:hint="Reason for Visit"
-                android:inputType="textPersonName"
-                android:paddingStart="8dp"
-                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Reason for Visit"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_grey"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/district"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reasonCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DEDEDE"
+                android:backgroundTint="#DEDEDE"
+                android:elevation="0dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectReasonTV"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                />
+                >
+
+                <Spinner
+                    android:id="@+id/reasonForVisit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingLeft="13dp"
+                    android:textColor="@color/rich_green" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/upload_text"
@@ -146,13 +206,14 @@
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reasonForVisit"
+                app:layout_constraintTop_toBottomOf="@+id/reasonCard"
                 />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/image_card_view"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="225dp"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/upload_text"
@@ -172,7 +233,18 @@
                         android:contentDescription="@string/app_name"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="75dp"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:padding="100dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <ImageView
+                        android:id="@+id/cameraImage"
+                        android:contentDescription="@string/app_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="90dp"
                         android:src="@drawable/baseline_camera_alt_24"
                         android:layout_gravity="center"
                         />

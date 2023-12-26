@@ -20,6 +20,7 @@ import com.example.salesforce.Database.GetData;
 import com.example.salesforce.GPS.GPSTracker;
 import com.example.salesforce.Web.ConnectionDetector;
 import com.example.salesforce.Web.Webservicerequest;
+import com.example.salesforce.activities.WebViewActivity;
 import com.example.salesforce.snackbar.Snackbar;
 import com.example.salesforce.snackbar.SnackbarManager;
 import com.example.salesforce.snackbar.enums.SnackbarType;
@@ -45,14 +46,14 @@ import dmax.dialog.SpotsDialog;
 public class LoginActivity extends Activity {
 
 
-
 //    select * from retailervisit order by cast(ID as int) desc LIMIT 3
 
     Button login;
     EditText user, pass;
-    TextView forgot_password,new_user;
+    TextView forgot_password, new_user, delete_account;
     String versionName;
-//    Databaseutill db;
+
+    //    Databaseutill db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,18 +65,19 @@ public class LoginActivity extends Activity {
         login = (Button) findViewById(R.id.button);
         forgot_password = (TextView) findViewById(R.id.forgot_password);
         new_user = (TextView) findViewById(R.id.new_user);
+        delete_account = (TextView) findViewById(R.id.delete_account);
 
         try {
-            versionName = getPackageManager().getPackageInfo(getPackageName(),0).versionName;
+            versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        Databaseutill db=Databaseutill.getDBAdapterInstance(getApplicationContext());
-        GetData get=new GetData(db, getApplicationContext());
+        Databaseutill db = Databaseutill.getDBAdapterInstance(getApplicationContext());
+        GetData get = new GetData(db, getApplicationContext());
         try {
-            String login_id=get.getLoginid().get(0);
-            String pass1=get.getPassword().get(0);
+            String login_id = get.getLoginid().get(0);
+            String pass1 = get.getPassword().get(0);
             user.setText(login_id);
             user.setTag(login_id);
             user.setEnabled(false);
@@ -88,13 +90,21 @@ public class LoginActivity extends Activity {
             er.printStackTrace();
         }
 
-forgot_password.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(getApplicationContext(),ForgotPassword.class);
-        startActivity(intent);
-    }
-});
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        delete_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
         new_user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,32 +114,24 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                 builder1.setTitle("Are you sure?");
                 builder1.setCancelable(true);
 
-                builder1.setPositiveButton(
-                        "Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
+                builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
 
-                                File fdb = getDatabasePath("/data/data/"
-                                        + getApplicationContext()
-                                        .getPackageName()
-                                        + "/databases/DBName.sqlite");
+                        File fdb = getDatabasePath("/data/data/" + getApplicationContext().getPackageName() + "/databases/DBName.sqlite");
 
-                                boolean val = fdb.delete();
-                                Intent intent = new Intent(getApplicationContext(),
-                                        LoginActivity.class);
-                                startActivity(intent);
-                                finish();
-                            }
-                        });
+                        boolean val = fdb.delete();
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
 
-                builder1.setNegativeButton(
-                        "No",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
+                builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
 
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
@@ -140,62 +142,39 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (String.valueOf(user.getText()).length() != 0
-                        && String.valueOf(pass.getText()).length() != 0) {
+                if (String.valueOf(user.getText()).length() != 0 && String.valueOf(pass.getText()).length() != 0) {
 
                     Databaseutill db = Databaseutill.getDBAdapterInstance(getApplicationContext());
-                    if(db.tb_exist("mas_emp")){
-                        new AsyncLoginLocal().execute(
-                                String.valueOf(user.getTag()),
-                                String.valueOf(pass.getTag()));
+                    if (db.tb_exist("mas_emp")) {
+                        new AsyncLoginLocal().execute(String.valueOf(user.getTag()), String.valueOf(pass.getTag()));
                     } else {
-                        ConnectionDetector cd = new ConnectionDetector(
-                                getApplicationContext());
+                        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
                         if (!cd.isConnectingToInternet()) {
-                            SnackbarManager.show(
-                                    Snackbar.with(LoginActivity.this)
-                                            .type(SnackbarType.MULTI_LINE)
-                                            .text("Please check internet connection")
-                                            .textColor(Color.WHITE)
+                            SnackbarManager.show(Snackbar.with(LoginActivity.this).type(SnackbarType.MULTI_LINE).text("Please check internet connection").textColor(Color.WHITE)
 
-                                            .color(Color.GRAY)
-                                            .actionLabel("Cancel")
-                                            .actionColor(Color.YELLOW)
-
-                                            .actionListener(new ActionClickListener() {
-                                                @Override
-                                                public void onActionClicked(Snackbar snackbar) {
-
-                                                }
-                                            })
-                            );
-                        } else {
-                            new AsyncLogin().execute(
-                                    String.valueOf(user.getText()),
-                                    String.valueOf(pass.getText()));
-                        }
-                    }
-                }
-
-                else {
-                    SnackbarManager.show(
-                            Snackbar.with(LoginActivity.this)
-                                    .type(SnackbarType.MULTI_LINE)
-                                    .text("Please enter username and password")
-                                    .textColor(Color.WHITE)
-
-                                    .color(Color.GRAY)
-                                    .actionLabel("Cancel")
-                                    .actionColor(Color.YELLOW)
+                                    .color(Color.GRAY).actionLabel("Cancel").actionColor(Color.YELLOW)
 
                                     .actionListener(new ActionClickListener() {
                                         @Override
                                         public void onActionClicked(Snackbar snackbar) {
 
                                         }
-                                    })
-                    );
+                                    }));
+                        } else {
+                            new AsyncLogin().execute(String.valueOf(user.getText()), String.valueOf(pass.getText()));
+                        }
+                    }
+                } else {
+                    SnackbarManager.show(Snackbar.with(LoginActivity.this).type(SnackbarType.MULTI_LINE).text("Please enter username and password").textColor(Color.WHITE)
 
+                            .color(Color.GRAY).actionLabel("Cancel").actionColor(Color.YELLOW)
+
+                            .actionListener(new ActionClickListener() {
+                                @Override
+                                public void onActionClicked(Snackbar snackbar) {
+
+                                }
+                            }));
 
 
                 }
@@ -221,9 +200,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
         @Override
         protected ArrayList<String> doInBackground(String... params) {
 
-            ArrayList<String> pass = new GetData(
-                    Databaseutill.getDBAdapterInstance(getApplicationContext()),
-                    getApplicationContext()).getEmpid();
+            ArrayList<String> pass = new GetData(Databaseutill.getDBAdapterInstance(getApplicationContext()), getApplicationContext()).getEmpid();
 
             return pass;
         }
@@ -234,54 +211,39 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
             try {
                 super.onPostExecute(result);
                 if (result.size() > 0) {
-                    String username=String.valueOf(result.get(1));
+                    String username = String.valueOf(result.get(1));
                     String password = String.valueOf(result.get(5));
 
-                    if (String.valueOf(pass.getText()).trim().equals(password)
-                            && String.valueOf(user.getText()).trim()
-                            .equals(username))
-                    {
+                    if (String.valueOf(pass.getText()).trim().equals(password) && String.valueOf(user.getText()).trim().equals(username)) {
                         Webservicerequest wsc = new Webservicerequest();
 
-                        Intent intenti = new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intenti = new Intent(getApplicationContext(), MainActivity.class);
                         intenti.putExtra("empid", result.get(0));
-                        intenti.putExtra("districtId",result.get(21));
+                        intenti.putExtra("districtId", result.get(21));
                         startActivity(intenti);
-
 
 
                         finish();
 
                     } else {
 
-                        SnackbarManager.show(
-                                Snackbar.with(LoginActivity.this)
-                                        .type(SnackbarType.MULTI_LINE)
-                                        .text("Enter a Valid Username/Password")
-                                        .textColor(Color.WHITE)
+                        SnackbarManager.show(Snackbar.with(LoginActivity.this).type(SnackbarType.MULTI_LINE).text("Enter a Valid Username/Password").textColor(Color.WHITE)
 
-                                        .color(Color.GRAY)
-                                        .actionLabel("Cancel")
-                                        .actionColor(Color.YELLOW)
+                                .color(Color.GRAY).actionLabel("Cancel").actionColor(Color.YELLOW)
 
-                                        .actionListener(new ActionClickListener() {
-                                            @Override
-                                            public void onActionClicked(Snackbar snackbar) {
+                                .actionListener(new ActionClickListener() {
+                                    @Override
+                                    public void onActionClicked(Snackbar snackbar) {
 
-                                            }
-                                        })
-                        );
-
+                                    }
+                                }));
 
 
                     }
 
                 } else {
 
-                    File fdb = getDatabasePath("/data/data/"
-                            + LoginActivity.this.getApplicationContext()
-                            .getPackageName()
-                            + "/databases/DBName.sqlite");
+                    File fdb = getDatabasePath("/data/data/" + LoginActivity.this.getApplicationContext().getPackageName() + "/databases/DBName.sqlite");
                     fdb.delete();
 /*					AlertDialogManager alert = new AlertDialogManager();
 
@@ -300,11 +262,10 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
     }
 
 
-    public void deleteRecursive(File fileDir)
-    {
-        if(fileDir.isDirectory())
+    public void deleteRecursive(File fileDir) {
+        if (fileDir.isDirectory())
 
-            for (File child: fileDir.listFiles())
+            for (File child : fileDir.listFiles())
                 deleteRecursive(child);
 
         fileDir.delete();
@@ -329,19 +290,16 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
 
             try {
 
-                db = Databaseutill
-                        .getDBAdapterInstance(getApplicationContext());
+                db = Databaseutill.getDBAdapterInstance(getApplicationContext());
                 get = new GetData(db, getApplicationContext());
 
-            pb = new SpotsDialog(LoginActivity.this);
-            pb.show();
-            gp=new GPSTracker(LoginActivity.this);
-            Lat=String.valueOf(gp.getLatitude());
-            Lng=String.valueOf(gp.getLongitude());
+                pb = new SpotsDialog(LoginActivity.this);
+                pb.show();
+                gp = new GPSTracker(LoginActivity.this);
+                Lat = String.valueOf(gp.getLatitude());
+                Lng = String.valueOf(gp.getLongitude());
 
-                File fdb = getDatabasePath("/data/data/"
-                        + getApplicationContext().getPackageName()
-                        + "/databases");
+                File fdb = getDatabasePath("/data/data/" + getApplicationContext().getPackageName() + "/databases");
                 fdb.delete();
 
                 deleteRecursive(fdb);
@@ -360,7 +318,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
             try {
 //                if (cd.isConnectingToInternet()) {
                 Webservicerequest wsc = new Webservicerequest();
-                resultdata = get.Logincls1(params[0],wsc.Encrypt(params[1]), Lat, Lng,versionName);
+                resultdata = get.Logincls1(params[0], wsc.Encrypt(params[1]), Lat, Lng, versionName);
                 if (resultdata == null) {
                     return null;
                 }
@@ -384,16 +342,13 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                     }
                     // ////////////////////////////////////////////////synk///////////////////
 
-                    try{
-                        File destDir = new File("/data/data/"
-                                + LoginActivity.this.getPackageName()
-                                + "/databases");
-                        if(!destDir.exists()){
-                            destDir.mkdir();}
-                        File destDir1 = new File("/data/data/"
-                                + LoginActivity.this.getPackageName()
-                                + "/databases/"+"DBNameS.sqlite");
-                        if(!destDir1.exists()){
+                    try {
+                        File destDir = new File("/data/data/" + LoginActivity.this.getPackageName() + "/databases");
+                        if (!destDir.exists()) {
+                            destDir.mkdir();
+                        }
+                        File destDir1 = new File("/data/data/" + LoginActivity.this.getPackageName() + "/databases/" + "DBNameS.sqlite");
+                        if (!destDir1.exists()) {
                             destDir1.createNewFile();
                         }
 
@@ -405,19 +360,14 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                         String str2 = localWebservicerequest.MobileWebservice("sync", localArrayList1);
 
 
-                        File fdb_result=getApplicationContext().getDatabasePath( "/data/data/"
-                                + LoginActivity.this.getPackageName()
-                                + "/databases/");
+                        File fdb_result = getApplicationContext().getDatabasePath("/data/data/" + LoginActivity.this.getPackageName() + "/databases/");
                         fdb_result.mkdir();
-                        File fdb=	getApplicationContext().getDatabasePath( "/data/data/"
-                                + LoginActivity.this.getPackageName()
-                                + "/databases/DBNameG.zip");
-                        if(fdb.exists())
-                        {
+                        File fdb = getApplicationContext().getDatabasePath("/data/data/" + LoginActivity.this.getPackageName() + "/databases/DBNameG.zip");
+                        if (fdb.exists()) {
                             fdb.delete();
                         }
                         fdb.createNewFile();
-                        urlstr =Webservicerequest.SyncURL + str2;
+                        urlstr = Webservicerequest.SyncURL + str2;
 //							String urlstr_temp=localWebservicerequest.URL;
 //							urlstr=urlstr_temp.substring(0,urlstr_temp.lastIndexOf("/"))+("/")+str2;
 
@@ -425,7 +375,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                         // String  urlstr="http://savannah.akshapp.com/mobappt/"+str2;
                         int count;
                         URL url = new URL(urlstr);
-                        HttpURLConnection conection = (HttpURLConnection)url.openConnection();
+                        HttpURLConnection conection = (HttpURLConnection) url.openConnection();
 
                         conection.connect();
                         conection.setInstanceFollowRedirects(true);
@@ -433,7 +383,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                         int lenghtOfFile = conection.getContentLength();
 
                         InputStream input = new BufferedInputStream(conection.getInputStream(), 8192);
-                        FileOutputStream fos=new FileOutputStream(fdb);
+                        FileOutputStream fos = new FileOutputStream(fdb);
 
                         byte data[] = new byte[1024];
                         long total = 0;
@@ -450,14 +400,11 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                         ArrayList<String> localArrayList_deleted = new ArrayList<String>();
                         localArrayList_deleted.add("fname");
                         localArrayList_deleted.add(str2);
-                        unzipFile( "/data/data/"
-                                + LoginActivity.this.getPackageName()
-                                + "/databases/DBNameG.zip","/data/data/"
-                                + LoginActivity.this.getPackageName()
+                        unzipFile("/data/data/" + LoginActivity.this.getPackageName() + "/databases/DBNameG.zip", "/data/data/" + LoginActivity.this.getPackageName()
 
                                 + "/databases/");
 
-                    }catch(Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                         return null;
                     }
@@ -480,32 +427,24 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
             if (result != null && result.size() > 0) {
                 try {
                     if (result.size() >= 4) {
-                            Intent intenti = new Intent(
-                                    getApplicationContext(), MainActivity.class);
-                            intenti.putExtra("empid", result.get(0));
-                            intenti.putExtra("districtId",result.get(3));
-                            startActivity(intenti);
+                        Intent intenti = new Intent(getApplicationContext(), MainActivity.class);
+                        intenti.putExtra("empid", result.get(0));
+                        intenti.putExtra("districtId", result.get(3));
+                        startActivity(intenti);
 
-                            finish();
+                        finish();
                     } else {
 
-                        SnackbarManager.show(
-                                Snackbar.with(LoginActivity.this)
-                                        .type(SnackbarType.MULTI_LINE)
-                                        .text("Please enter a valid username and password")
-                                        .textColor(Color.WHITE)
+                        SnackbarManager.show(Snackbar.with(LoginActivity.this).type(SnackbarType.MULTI_LINE).text("Please enter a valid username and password").textColor(Color.WHITE)
 
-                                        .color(Color.GRAY)
-                                        .actionLabel("Cancel")
-                                        .actionColor(Color.YELLOW)
+                                .color(Color.GRAY).actionLabel("Cancel").actionColor(Color.YELLOW)
 
-                                        .actionListener(new ActionClickListener() {
-                                            @Override
-                                            public void onActionClicked(Snackbar snackbar) {
+                                .actionListener(new ActionClickListener() {
+                                    @Override
+                                    public void onActionClicked(Snackbar snackbar) {
 
-                                            }
-                                        })
-                        );
+                                    }
+                                }));
 
 
                     }
@@ -515,23 +454,17 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                     er.printStackTrace();
                 }
             } else {
-                SnackbarManager.show(
-                        Snackbar.with(LoginActivity.this) // context
-                                .type(SnackbarType.MULTI_LINE)
-                                .text("Please enter a valid username and password")
-                                .textColor(Color.WHITE)
+                SnackbarManager.show(Snackbar.with(LoginActivity.this) // context
+                        .type(SnackbarType.MULTI_LINE).text("Please enter a valid username and password").textColor(Color.WHITE)
 
-                                .color(Color.GRAY)
-                                .actionLabel("Cancel")
-                                .actionColor(Color.YELLOW)
+                        .color(Color.GRAY).actionLabel("Cancel").actionColor(Color.YELLOW)
 
-                                .actionListener(new ActionClickListener() {
-                                    @Override
-                                    public void onActionClicked(Snackbar snackbar) {
+                        .actionListener(new ActionClickListener() {
+                            @Override
+                            public void onActionClicked(Snackbar snackbar) {
 
-                                    }
-                                })
-                );
+                            }
+                        }));
 
             }
 
@@ -564,8 +497,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                     FileOutputStream fos = null;
                     String opFilePath = extpath + zEntry.getName();
 
-                    File destDir = new File("/data/data/"
-                            + LoginActivity.this.getPackageName() + "/databases/files");
+                    File destDir = new File("/data/data/" + LoginActivity.this.getPackageName() + "/databases/files");
                     destDir.mkdir();
                     File destDir1 = new File(opFilePath);
                     destDir1.createNewFile();
@@ -583,9 +515,7 @@ forgot_password.setOnClickListener(new View.OnClickListener() {
                     OutputStream out = null;
 
                     in = new FileInputStream(opFilePath);
-                    out = new FileOutputStream("/data/data/"
-                            + LoginActivity.this.getPackageName() + "/databases/"
-                            + "DBName.sqlite");
+                    out = new FileOutputStream("/data/data/" + LoginActivity.this.getPackageName() + "/databases/" + "DBName.sqlite");
                     copyFile(in, out);
                     in.close();
                     in = null;
